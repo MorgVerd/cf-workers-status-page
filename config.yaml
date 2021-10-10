@@ -30,7 +30,7 @@ monitors:
     url: 'https://cdn.morgverd.com'
     method: GET
     expectStatus: 200
-    linkable: true
+    linkable: false
 
   - id: dev
     name: 'Development Workspace'
@@ -38,39 +38,46 @@ monitors:
     url: 'https://morgverd.dev/'
     method: GET
     expectStatus: 200
+    linkable: false
 
   - id: uk-01
     name: 'UK-01'
     url: 'https://01.uk.nodes.morgverd.com/'
     method: GET
     expectStatus: 200
+    linkable: false
 
   - id: uk-02
     name: 'UK-02'
     url: 'https://02.uk.nodes.morgverd.com/'
     method: GET
     expectStatus: 200
+    linkable: false
 
   - id: uk-03
     name: 'UK-03'
     url: 'https://03.uk.nodes.morgverd.com/'
     method: GET
     expectStatus: 200
+    linkable: false
 
   - id: uk-04
     name: 'UK-04'
     url: 'https://04.uk.nodes.morgverd.com/'
     method: GET
     expectStatus: 200
+    linkable: false
 
   - id: uk-05
     name: 'UK-05'
     url: 'https://05.uk.nodes.morgverd.com/'
     method: GET
     expectStatus: 200
+    linkable: false
 
   - id: uk-06
     name: 'UK-06'
     url: 'https://06.uk.nodes.morgverd.com/'
     method: GET
     expectStatus: 200
+    linkable: false
