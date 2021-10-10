@@ -15,8 +15,8 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: morgverd-com
-    name: morgverd.com
+  - id: com
+    name: 'Main Website'
     description: 'The main website homepage.'
     url: 'https://morgverd.com/'
     method: GET
@@ -25,16 +25,52 @@ monitors:
     linkable: true
 
   - id: cdn
-    name: cdn.morgverd.com
+    name: 'Content Delivery Network'
     description: 'Content Delivery Network master server.'
     url: 'https://cdn.morgverd.com'
     method: GET
     expectStatus: 200
     linkable: true
 
-  - id: morgverd.dev
-    name: morgverd.dev
+  - id: dev
+    name: 'Development Workspace'
     description: 'The main development workspace.'
     url: 'https://morgverd.dev/'
+    method: GET
+    expectStatus: 200
+
+  - id: uk-01
+    name: 'UK-01'
+    url: 'https://01.uk.nodes.morgverd.com/'
+    method: GET
+    expectStatus: 200
+
+  - id: uk-02
+    name: 'UK-02'
+    url: 'https://02.uk.nodes.morgverd.com/'
+    method: GET
+    expectStatus: 200
+
+  - id: uk-03
+    name: 'UK-03'
+    url: 'https://03.uk.nodes.morgverd.com/'
+    method: GET
+    expectStatus: 200
+
+  - id: uk-04
+    name: 'UK-04'
+    url: 'https://04.uk.nodes.morgverd.com/'
+    method: GET
+    expectStatus: 200
+
+  - id: uk-05
+    name: 'UK-05'
+    url: 'https://05.uk.nodes.morgverd.com/'
+    method: GET
+    expectStatus: 200
+
+  - id: uk-06
+    name: 'UK-06'
+    url: 'https://06.uk.nodes.morgverd.com/'
     method: GET
     expectStatus: 200
