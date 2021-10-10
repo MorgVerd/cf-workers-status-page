@@ -1,12 +1,12 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  title: 'Network Status'
+  url: 'https://status.morgverd.com' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
   allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
+  notAllmonitorsOperational: 'Services Downgraded'
   monitorLabelOperational: 'Operational'
   monitorLabelNotOperational: 'Not Operational'
   monitorLabelNoData: 'No data'
@@ -15,25 +15,26 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
-    method: GET # default=GET
-    expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
-
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: morgverd-com
+    name: morgverd.com
+    description: 'The main website homepage.'
+    url: 'https://morgverd.com/'
     method: GET
     expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
+    followRedirect: false
+    linkable: true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: cdn
+    name: cdn.morgverd.com
+    description: 'Content Delivery Network master server.'
+    url: 'https://cdn.morgverd.com'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: morgverd.dev
+    name: morgverd.dev
+    description: 'The main development workspace.'
+    url: 'https://morgverd.dev/'
     method: GET
     expectStatus: 200
