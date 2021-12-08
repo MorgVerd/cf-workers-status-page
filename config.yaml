@@ -79,11 +79,3 @@ monitors:
     expectStatus: 302
     linkable: false
     followRedirect: false
-
-  - id: uk-06
-    name: 'UK-06'
-    url: 'https://06.uk.nodes.morgverd.com/'
-    method: GET
-    expectStatus: 302
-    linkable: false
-    followRedirect: false
