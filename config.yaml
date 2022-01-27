@@ -30,16 +30,8 @@ monitors:
     url: 'https://cdn.morgverd.com'
     method: GET
     expectStatus: 200
-    linkable: false
-
-  - id: dev
-    name: 'Development Workspace'
-    description: 'The main development workspace.'
-    url: 'https://morgverd.dev/'
-    method: GET
-    expectStatus: 200
-    linkable: false
-
+    linkable: true
+    
   - id: uk-01
     name: 'UK-01'
     url: 'https://01.uk.nodes.morgverd.com/'
