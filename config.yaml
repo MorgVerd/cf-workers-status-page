@@ -32,6 +32,14 @@ monitors:
     expectStatus: 200
     linkable: true
     
+  - id: ca-01
+    name: 'CA-01'
+    url: 'https://01.ca.nodes.morgverd.com/'
+    method: GET
+    expectStatus: 302
+    linkable: false
+    followRedirect: false
+    
   - id: uk-01
     name: 'UK-01'
     url: 'https://01.uk.nodes.morgverd.com/'
