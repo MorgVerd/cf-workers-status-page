@@ -71,3 +71,11 @@ monitors:
     expectStatus: 302
     linkable: false
     followRedirect: false
+    
+  - id: uk-05
+    name: 'UK-05'
+    url: 'https://04.uk.nodes.morgverd.com/'
+    method: GET
+    expectStatus: 302
+    linkable: false
+    followRedirect: false
