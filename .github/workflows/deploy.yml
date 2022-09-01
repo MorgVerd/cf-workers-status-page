@@ -35,6 +35,8 @@ jobs:
           [ -z "$SECRET_TELEGRAM_API_TOKEN" ] && echo "Secret SECRET_TELEGRAM_API_TOKEN not set, creating dummy one..." && SECRET_TELEGRAM_API_TOKEN="default-gh-action-secret" || true
           [ -z "$SECRET_TELEGRAM_CHAT_ID" ] && echo "Secret SECRET_TELEGRAM_CHAT_ID not set, creating dummy one..." && SECRET_TELEGRAM_CHAT_ID="default-gh-action-secret" || true
           [ -z "$SECRET_DISCORD_WEBHOOK_URL" ] && echo "Secret SECRET_DISCORD_WEBHOOK_URL not set, creating dummy one..." && SECRET_DISCORD_WEBHOOK_URL="default-gh-action-secret" || true
+          [ -z "$SECRET_WEBHOOK_URL" ] && echo "Secret SECRET_WEBHOOK_URL not set, creating dummy one..." && SECRET_WEBHOOK_URL="default-gh-action-secret" || true
+          [ -z "$SECRET_WEBHOOK_TOKEN" ] && echo "Secret SECRET_WEBHOOK_TOKEN not set, creating dummy one..." && SECRET_WEBHOOK_TOKEN="default-gh-action-secret" || true
         postCommands: |
           yarn kv-gc
         secrets: |
@@ -42,6 +44,8 @@ jobs:
           SECRET_TELEGRAM_API_TOKEN
           SECRET_TELEGRAM_CHAT_ID
           SECRET_DISCORD_WEBHOOK_URL
+          SECRET_WEBHOOK_URL
+          SECRET_WEBHOOK_TOKEN
         environment: production
       env:
         CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
@@ -49,3 +53,5 @@ jobs:
         SECRET_TELEGRAM_API_TOKEN: ${{secrets.SECRET_TELEGRAM_API_TOKEN}}
         SECRET_TELEGRAM_CHAT_ID: ${{secrets.SECRET_TELEGRAM_CHAT_ID}}
         SECRET_DISCORD_WEBHOOK_URL: ${{secrets.SECRET_DISCORD_WEBHOOK_URL}}
+        SECRET_WEBHOOK_URL: ${{secrets.SECRET_WEBHOOK_URL}}
+        SECRET_WEBHOOK_TOKEN: ${{secrets.SECRET_WEBHOOK_TOKEN}}
