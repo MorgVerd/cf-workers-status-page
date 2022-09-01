@@ -67,7 +67,7 @@ export async function processCronTrigger(event) {
             operational: monitorOperational,
         }
 
-        // Send Discord message on monitor change
+        // Send webhook to central webhook server
         if (
             monitorStatusChanged &&
             typeof SECRET_WEBHOOK_URL !== 'undefined' &&
